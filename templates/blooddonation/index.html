@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Noto+Serif&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .head {
+        font-family: Noto Serif;
+        color: red;
+        font-size: 50px;
+    }
+
+    .first {
+        height: auto;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .counter {
+        margin: 0;
+        /* margin-top: -4px; */
+        background-color: rgb(255, 65, 65);
+        height: 150px;
+        width: auto;
+        padding: 0;
+    }
+
+    .buttons {
+        background-color: rgb(230, 219, 206);
+        height: 100px;
+        display: flex;
+        flex-flow: row;
+    }
+
+    .btn {
+        /* height: 130px; */
+        background-color: red;
+        width: 300px;
+        /* border-radius: 30px; */
+        padding: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 30px;
+        min-height: 50px;
+        margin-right: 30px;
+        color: white;
+    }
+
+    .fa {
+        padding: 20px;
+        margin-top: -40px;
+    }
+
+    .text {
+        font-size: 20px;
+        font-family: Noto Serif;
+    }
+
+    .fig {
+        display: flex;
+        flex-flow: row;
+        height: 300px;
+        padding: 20px;
+    }
+
+    .one {
+        width: 500px
+    }
+
+    .two {
+        width: 1600px;
+        height: 200px;
+        ;
+    }
+
+    .pic1 {
+        height: 250px;
+        /* margin-left: 100px; */
+        padding: 10px;
+        width: auto;
+    }
+
+    td {
+        padding-right: 30px;
+    }
+
+    tbody {
+        padding: 10px;
+    }
+
+    .three {
+        width: 100%;
+        height: auto;
+        background-color: #e7e7e7;
+        /* margin-top: -50px; */
+    }
+
+    .abc {
+        display: flex;
+        flex-flow: row;
+    }
+
+    .a {
+        background-color: #e7e7e7;
+        ;
+        width: 33%;
+        height: auto;
+        /* border-right:1px solid rgba(128, 128, 128, 0.193);
+    border-left:1px solid rgba(128, 128, 128, 0.193); */
+    }
+
+    .b {
+        background-color: #e7e7e7;
+        ;
+        width: 33%;
+        height: auto;
+        border-right: 1px solid rgba(128, 128, 128, 0.193);
+        border-left: 1px solid rgba(128, 128, 128, 0.193);
+    }
+
+    .c {
+        background-color: #e7e7e7;
+        ;
+        width: 33%;
+        height: auto;
+        /* border-right:1px solid rgba(128, 128, 128, 0.193);
+    border-left:1px solid rgba(128, 128, 128, 0.193); */
+    }
+
+    .foot {
+        background-color: rgb(2, 2, 32);
+    }
+
+    .ftr {
+        padding: 55px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<body>
+    {%load static%}
+    <!-- <i class="fa fa-car"></i> -->
+    <div class="container">
+        <center>
+            <h1 class="head"> Welcome To The Raktkosh</h1>
+        </center>
+        <img class="first" src='static/blooddonation/abc.jpg' alt="nahi ho raha" srcset="">
+        <!-- <div class="counter">
+       logic for the counting of collected and available unots of blood 
+    </div> -->
+        <form method="post">
+            {%csrf_token%}
+            <div class="buttons">
+                <button class="btn" value="donate" name="donate">
+                    <div class="text">Donate Blood</div>
+                </button>
+                <button class="btn" value="buy" name="buy">
+                    <div class="text">Buy Blood</div>
+                </button>
+                <button class="btn" value="register" name="register">
+                    <div class="text">Schedule Camp</div>
+                </button>
+                <button class="btn" value="camp" name="camp">
+                    <div class="text">Upcoming Camp</div>
+                </button>
+                <button class="btn" value="history" name="history">
+                    <div class="text">History Of Donation</div>
+                </button>
+            </div>
+        </form>
+        <div class="fig">
+            <div class="one"><img class="pic1" src='static/blooddonation/donationFact.jpg' alt="" srcset="">
+            </div>
+            <div class="two">
+                <div class="col-sm-6" align="center" style="font-size: 1.5rem;">
+                    <table class="table table-responsive  ">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" style="color:white;background-color:red;">Compatible Blood Type Donors
+                                </th>
+                            </tr>
+                            <tr>
+                                <td><b>Blood Type</b></td>
+                                <td><b>Donate Blood To</b></td>
+                                <td><b>Receive Blood From</b></td>
+                            </tr>
+                            <tr>
+                                <td><span style="color: #961e1b;"><b>A+</b></span></td>
+                                <td>A+ AB+</td>
+                                <td>A+ A- O+ O-</td>
+                            </tr>
+                            <tr>
+                                <td><span style="color: #961e1b;"><b>O+</b></span></td>
+                                <td>O+ A+ B+ AB+</td>
+                                <td>O+ O-</td>
+                            </tr>
+                            <tr>
+                                <td><span style="color: #961e1b;"><b>B+</b></span></td>
+                                <td>B+ AB+</td>
+                                <td>B+ B- O+ O-</td>
+                            </tr>
+                            <tr>
+                                <td><span style="color: #961e1b;"><b>AB+</b></span></td>
+                                <td>AB+</td>
+                                <td>Everyone</td>
+                            </tr>
+                            <tr>
+                                <td><span style="color: #961e1b;"><b>A-</b></span></td>
+                                <td>A+ A- AB+ AB-</td>
+                                <td>A- O-</td>
+                            </tr>
+                            <tr>
+                                <td><span style="color: #961e1b;"><b>O-</b></span></td>
+                                <td>Everyone</td>
+                                <td>O-</td>
+                            </tr>
+                            <tr>
+                                <td><span style="color: #961e1b;"><b>B-</b></span></td>
+                                <td>B+ B- AB+ AB-</td>
+                                <td>B- O-</td>
+                            </tr>
+                            <tr>
+                                <td><span style="color: #961e1b;"><b>AB-</b></span></td>
+                                <td>AB+ AB-</td>
+                                <td>AB- A- B- O-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="three">
+            <center style="color: red; font-size: 30px;"><b>Type of Donation</b></center>
+            <br>
+            <center>
+                <p class="txt1" style="font-size: larger;">
+                    The human body contains five liters of blood, which is made of several useful components i.e.
+                    <b>Whole blood</b>,<b> Platelet</b>
+                    , and <b>Plasma</b>.
+                </p>
+            </center>
+            <br>
+            <center>
+                <p class="txt1" style="font-size: larger;">
+                    Each type of component has several medical uses and can be used for different medical treatments.
+                    your blood donation determines the best donation for you to make.
+                </p>
+            </center>
+            <br>
+            <center>
+                <p class="txt1" style="font-size: larger;">
+                    For <b>plasma</b> and <b>platelet</b> donation you must have donated whole blood in past two years.
+                </p>
+            </center>
+            <br>
+            <br>
+            <br>
+            <div class="abc">
+                <br>
+                <div class="a">
+                    <center style="color: red; font-size: 25px;">Whole Blood</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>What is it?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Blood Collected straight from the donor after its donation usually
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">separated into red blood cells, platelets, and plasma.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>Who can donate?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">You need to be 18-65 years old, weigh 45kg or more and be fit and
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">healthy.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>User for?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Stomach disease, kidney disease, childbirth, operations, blood
+                        loss, </center>
+                    <br>
+                    <center style="font-size: 18px;">trauma, cancer, blood diseases, haemophilia, anemia, heart disease.
+                    </center>
+                    <br>
+                    <center style="font-size: 20px;"><b>Lasts For?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Red cells can be stored for 42 days. </center>
+                    <br>
+                    <center style="font-size: 20px;"><b>How long does it take?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">15 minutes to donate. </center>
+                    <br>
+                    <center style="font-size: 20px;"><b>How often can I donate?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Every 12 weeks</center>
+                </div>
+                <div class="b">
+                    <center style="color: red; font-size: 25px;">Plasma</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>What is it?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">The straw-coloured liquid in which red blood cells, white blood
+                        cells</center>
+                    <br>
+                    <center style="font-size: 18px;">and platelets float in.Contains special nutrients which can be used
+                        to</center>
+                    <br>
+                    <center style="font-size: 18px;">create 18 different type of medical products to treat many
+                        different</center>
+                    <br>
+                    <center style="font-size: 18px;">medical conditions.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>Who can donate?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">You need to be 18-70 (men) or 20-70 (women) years old, weigh 50kg
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">or more and must have given successful whole blood donation in last
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">two years.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>Used for?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Immune system conditions, pregnancy (including anti-D injections),
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">bleeding, shock, burns, muscle and nerve conditions, haemophilia,
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">immunisations.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>Last's for?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Plasma can last up to one year when frozen.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>How does it work?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">We collect your blood, keep plasma and return rest to you by
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">apheresis donation.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>How long does it take?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">15 minutes to donate.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>How often can I donate?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Every 2-3 weeks.</center>
+                    <br>
+                </div>
+                <div class="c">
+                    <center style="color: red; font-size: 25px;">platelets</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>What is it?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">The tiny 'plates' in blood that wedge together to help to clot and
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">reduce bleeding. Always in high demand, Vital for people with low
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">platelet count, like malaria and cancer patients.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>Who can donate?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">You need to be 18-70 years old (men), weigh 50kg or more and have
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">given a successful plasma donation in the past 12 months</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>User for?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Cancer, blood diseases, haemophilia, anaemia, heart disease,
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">stomach disease, kidney disease, childbirth, operations, blood
+                        loss,</center>
+                    <br>
+                    <center style="font-size: 18px;">trauma, burns.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>Lasts For?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Just five days.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>How does it work?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">We collect your blood, keep platelet and return rest to you by
+                    </center>
+                    <br>
+                    <center style="font-size: 18px;">apheresis donation.</center>
+                    <br>
+                    <center style="font-size: 20px;"><b>How long does it take?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">45 minutes to donate. </center>
+                    <br>
+                    <center style="font-size: 20px;"><b>How often can I donate?</b></center>
+                    <br>
+                    <center style="font-size: 18px;">Every 2 weeks</center>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <img class="ftr" src="https://www.eraktkosh.in/BLDAHIMS/bloodbank/transactions/assets/images/icons/MOHF.png"
+                alt="" srcset="">
+            <img class="ftr"
+                src="https://www.eraktkosh.in/BLDAHIMS/bloodbank/transactions/assets/images/icons/india-gov.png" alt=""
+                srcset="">
+            <!-- <img class="ftr" src="https://www.eraktkosh.in/BLDAHIMS/bloodbank/transactions/assets/images/icons/umang.png" alt="" srcset=""> -->
+            <img class="ftr"
+                src="https://www.eraktkosh.in/BLDAHIMS/bloodbank/transactions/assets/images/icons/logo_nhp_back.png"
+                alt="" srcset="">
+            <img class="ftr" src="https://www.eraktkosh.in/BLDAHIMS/hisglobal/bbpublic/images/logo-nrhm.png" alt=""
+                srcset="">
+        </div>
+    </div>
+</body>
+
+</html>
